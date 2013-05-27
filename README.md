@@ -22,12 +22,7 @@ The HTML structure looks like this.
 
   <div class='collapse'>
     <div class='box'>
-      <div class='arrow'></div>
-      <div class='arrow-border'></div>
-
       Content in PopBox goes here :)
-
-      <a href="#" class="close">close</a>
     </div>
   </div>
 </div>
@@ -51,11 +46,16 @@ If there are any CSS class name conflicts, they can be overridden.
      $('.popbox').popbox({
        'open'          : '.open',
        'box'           : '.box',
-       'arrow'         : '.arrow',
-       'arrow_border'  : '.arrow_border',
-       'close'         : '.close'
       });
    });
+</script>
+```
+
+You can change the box's position
+
+```html
+<script type='text/javascript'>
+box.css({'display': 'block', 'top': 194, 'left': 92});
 </script>
 ```
 
