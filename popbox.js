@@ -17,7 +17,7 @@
         var box = $(this).parent().find(settings['box']);
         var hover_image = $(this).find(settings['hover_image']);
         box.css({'display': 'block', 'top': 194, 'left': 92});
-        hover_image.css({'display': 'block'})
+        hover_image.css({'display': 'block'});
       },
 
       close: function(event){ 
