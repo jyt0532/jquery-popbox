@@ -58,6 +58,21 @@ You can change the box's position
 box.css({'display': 'block', 'top': 194, 'left': 92});
 </script>
 ```
+And you can add specific class for another position
+
+```html
+<script type='text/javascript'>
+if($(this).parent().hasClass('last-line-left')){
+  box.css({'display': 'block', 'top': -251, 'left': 158});
+}else if($(this).parent().hasClass('last-line-middle')){ 
+  box.css({'display': 'block', 'top': -101, 'left': 158});
+}else{
+  box.css({'display': 'block', 'top': 189, 'left': 92});
+}
+
+</script>
+```
+
 
 ## Screenshot
 ![jQuery PopBox Screenshot](https://github.com/gristmill/jquery-popbox/raw/master/screenshot.png)
