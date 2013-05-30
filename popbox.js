@@ -16,7 +16,13 @@
         var pop = $(this);
         var box = $(this).parent().find(settings['box']);
         var hover_image = $(this).find(settings['hover_image']);
-        box.css({'display': 'block', 'top': 194, 'left': 92});
+        if($(this).parent().hasClass('last-line-left')){
+          box.css({'display': 'block', 'top': -251, 'left': 158});
+        }else if($(this).parent().hasClass('last-line-middle')){ 
+          box.css({'display': 'block', 'top': -101, 'left': 158});
+        }else{
+          box.css({'display': 'block', 'top': 189, 'left': 92});
+        }
         hover_image.css({'display': 'block'});
       },
 
