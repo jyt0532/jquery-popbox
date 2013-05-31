@@ -16,16 +16,15 @@
         var pop = $(this);
         var box = $(this).parent().find(settings['box']);
         var hover_image = $(this).find(settings['hover_image']);
-        if($(this).parent().hasClass('last-line-left')){
-          box.css({'display': 'block', 'top': -251, 'left': 158});
-        }else if($(this).parent().hasClass('last-line-middle')){ 
-          box.css({'display': 'block', 'top': -101, 'left': 158});
+        var currentPositionRelativeToScreen = $(this).parent().position().top - $(window).scrollTop();
+        if(currentPositionRelativeToScreen > $(window).height()/2
+          || currentPositionRelativeToScreen + 189 + box.height() > $(window).height()){
+          box.css({'display': 'block', 'top': 189 - box.height(), 'left': 92});
         }else{
           box.css({'display': 'block', 'top': 189, 'left': 92});
         }
         hover_image.css({'display': 'block'});
       },
-
       close: function(event){ 
         event.preventDefault();
         $(settings['box']).fadeOut("fast");
